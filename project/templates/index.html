@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Главная{% endblock %}
+{% block header %}{% endblock %}
+{% block content %}
+{% load thumbnail %}
+{{ text|safe }}
+{% thumbnail image "860x640" crop="center" upscale=True as im %}
+    <img src="{{ im.url }}">
+{% endthumbnail %}
+{% endblock %}

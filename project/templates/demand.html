@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Востребованность{% endblock %}
+{% block header %}Востребованность{% endblock %}
+{% block content %}
+{% load user_filters %}
+{% load thumbnail %}
+{% thumbnail image "860x640" crop="center" upscale=True as im %}
+    <img src="{{ im.url }}">
+{% endthumbnail %}
+<table border="1">
+    {% for row in rows %}
+    <tr>
+        {% for col in cols %}
+        <td>{{ data|lookup:row|lookup:col }}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

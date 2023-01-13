@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Последнии вакансии{% endblock %}
+{% block header %}Последние вакансии{% endblock %}
+{% block content %}
+    {% for vacancy in vacancies %}
+        <h2>Вакансия - {{ vacancy.0 }}</h2>
+        <h4>Описание: </h4>
+        {{ vacancy.1|safe }}
+        <br>
+        <h4>Необходимые навыки: </h4>
+        {% for skill in vacancy.2 %}
+            {{ skill }},
+        {% endfor %}
+        <br>
+        <h4>Компания: </h4>
+        {{ vacancy.3 }}
+        <br>
+        <h4>Оклад: </h4>
+        {{ vacancy.4 }} {{ vacancy.7 }}
+        <br>
+        <h4>Регион: </h4>
+        {{ vacancy.5 }}
+        <br>
+        <h4>Дата публикации: </h4>
+        {{ vacancy.6 }}
+        <br><br>
+    {% endfor %}
+{% endblock %}

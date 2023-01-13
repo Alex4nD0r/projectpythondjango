@@ -1,0 +1,28 @@
+<div class="w-25">
+        <h4>Меню</h4>
+    <div class="px-0">
+        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start" id="menu">
+            <li class="nav-item">
+                <a href="{% url 'index' %}" class="nav-link text-truncate text-decoration-none text-reset">
+                    <i class="fs-5 bi-house"></i><h5 class="ms-1 d-none d-sm-inline">Главная</h5>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'demand' %}" class="nav-link text-truncate text-decoration-none text-reset">
+                    <i class="fs-5"></i><h5 class="ms-1 d-none d-sm-inline">Востребованность</h5></a>
+            </li>
+            <li>
+                <a href="{% url 'geo' %}" class="nav-link text-truncate text-decoration-none text-reset">
+                    <i class="fs-5"></i><h5 class="ms-1 d-none d-sm-inline">География</h5></a>
+            </li>
+
+                <a href="{% url 'skills' %}" class="nav-link text-truncate text-decoration-none text-reset">
+                    <i class="fs-5"></i><h5 class="ms-1 d-none d-sm-inline">Навыки</h5></a>
+            </li>
+            <li>
+                <a href="{% url 'vacancies' %}" class="nav-link text-truncate text-decoration-none text-reset">
+                    <i class="fs-5"></i><h5 class="ms-1 d-none d-sm-inline">Последние вакансии</h5> </a>
+            </li>
+        </ul>
+    </div>
+</div>
